@@ -3,6 +3,7 @@ node_modules/
 .DS_Store
 .zos.session
 .openzeppelin/.session
+.vite
 deployments/
 env/
 dist/
