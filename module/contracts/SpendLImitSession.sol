@@ -61,7 +61,7 @@ contract SpendLimitSession is ERC7579ValidatorBase, ERC7579ExecutorBase {
         // Extract the target address and the session key from the execution calldata.
         (address target , uint256 value, bytes calldata callData) = executionCalldata.decodeSingle();
 
-        address sessionKey = address(bytes20(callData[48:]));
+        address sessionKey = address(bytes20(callData[16:]));
 
         // Check if the session key is valid.
         bool validSig =  sessionKey.isValidSignatureNow(

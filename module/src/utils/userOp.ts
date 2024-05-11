@@ -114,7 +114,7 @@ export const buildUnsignedUserOpTransaction = (
 
   return {
     sender: from,
-    nonce: ethers.toBeHex(nonce),
+    nonce: nonce,
     initCode: '0x',
     callData: callData,
     preVerificationGas: ethers.toBeHex(60000),

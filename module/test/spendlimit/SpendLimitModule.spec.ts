@@ -98,10 +98,6 @@ describe('Spendlimit session key - Basic tests', () => {
         'function execute(address sessionKey, address to, uint256 value, bytes calldata data) external',
       ]
 
-
-      console.log('safe', await safe.getAddress())
-      console.log('adater', await spendLimitModule.getAddress())
-
       const execCallData = new ethers.Interface(abi).encodeFunctionData('execute', [user1.address, user1.address, ethers.parseEther('0.5'), '0x' as Hex])
 
       const newCall = {target: await spendLimitModule.getAddress() as Hex, value: 0, callData: execCallData as Hex}
